@@ -6,34 +6,29 @@ const postsController = require('../controllers/postsController')
 
 
 // rotte di CRUD dei posts
+
 // index
-router.get('/', function (req, res) {
-});
+router.get('/', postsController.index);
 
 
 // show
-router.get('/:id', function (req, res) {
-});
+router.get('/:id', postsController.show);
 
 
 // store
-router.post('/', function (req, res) {
-});
+router.post('/', postsController.store);
 
 
 // update
-router.put('/:id', function (req, res) {
-});
+router.put('/:id', postsController.update);
 
 
 // modify
-router.patch('/:id', function (req, res) {
-});
+router.patch('/:id', postsController.modify);
 
 
 // destroy
-router.delete('/:id', function (req, res) {
-});
+router.delete('/:id', postsController.destroy);
 
 
 // esportiamo il modulo del router

@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 // importiamo il router per l'entita post
-const postsRouter = require('./routers/posts');
+const postsRouter = require('./routers/postsRouters');
 
 
 
