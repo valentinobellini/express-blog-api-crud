@@ -12,9 +12,9 @@ function index(req, res) {
 
 // show
 function show(req, res) {
-    // Converti id in numero
+    // converti id in numero
     const postId = parseInt(req.params.id);
-    // Trova il post corrispondente
+    // trova il post corrispondente
     const post = posts.find(p => p.id === postId); 
 
     if (!post) {
@@ -45,7 +45,25 @@ function modify(req, res) {
 
 // destroy
 function destroy(req, res) {
-    res.send('Eliminazione del post ' + req.params.id);
+    // converti id in numero
+    const postId = parseInt(req.params.id);
+    // trova il post corrispondente
+    const post = posts.find(p => p.id === postId); 
+    
+    if (!post) {
+        return res.status(404).json({ error: 'Post non trovato' });
+    }
+    
+    
+    // rimuovi il post dall'elenco di posts
+    posts.splice(posts.indexOf(post), 1);
+
+    //logga array modificato per debug
+    console.log(posts);
+    
+    
+    // restituisci lo stato di avvenuta cancellazione
+    res.status(204).json({ message: 'Post eliminato con successo' });
 };
 
 
