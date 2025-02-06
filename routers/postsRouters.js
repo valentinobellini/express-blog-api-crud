@@ -2,6 +2,7 @@
 const express = require('express')
 const router = express.Router();
 // const posts = require('../data/posts');
+const postsController = require('../controllers/postsController')
 
 
 // rotte di CRUD dei posts
