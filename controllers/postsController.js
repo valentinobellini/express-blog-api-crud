@@ -9,11 +9,11 @@ function index(req, res) {
 
     // inizialmente il menu filtrato corrisponde a quello originale
     let filteredPosts = posts;
-    // se la richiesta http contiene una query "tags", filtra
+    // se la richiesta http contiene una query "tags"...
     if (req.query.tags) {
-        // crea un nuovo array con solo i post che contengono il valore "tags" specificato
+        // ... filtra e crea un nuovo array...
         filteredPosts = posts.filter(
-            // verifica se l'array "tags" del post contiene il valore specificato nella query
+            // ... con solo i post che contengono il valore "tags" specificato
             post => post.tags.includes(req.query.tags)
         );
     }
