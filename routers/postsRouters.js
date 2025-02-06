@@ -1,7 +1,6 @@
-// importiamo express e utlizziamo la parte di routing
+// importiamo express e utlizziamo la parte di routing e il controller
 const express = require('express')
 const router = express.Router();
-// const posts = require('../data/posts');
 const postsController = require('../controllers/postsController')
 
 

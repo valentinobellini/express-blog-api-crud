@@ -5,8 +5,20 @@ const posts = require('../data/posts');
 
 // index
 function index(req, res) {
-    
-    res.json(posts);
+
+
+    // inizialmente il menu filtrato corrisponde a quello originale
+    let filteredPosts = posts;
+    // se la richiesta http contiene una query "tags", filtra
+    if (req.query.tags) {
+        // crea un nuovo array con solo i post che contengono il valore "tags" specificato
+        filteredPosts = posts.filter(
+            // verifica se l'array "tags" del post contiene il valore specificato nella query
+            post => post.tags.includes(req.query.tags)
+        );
+    }
+    // restituiamo la variabile filteredPosts
+    res.json(filteredPosts);
 };
 
 
@@ -15,7 +27,7 @@ function show(req, res) {
     // converti id in numero
     const postId = parseInt(req.params.id);
     // trova il post corrispondente
-    const post = posts.find(p => p.id === postId); 
+    const post = posts.find(p => p.id === postId);
 
     if (!post) {
         return res.status(404).json({ error: 'Post non trovato' });
@@ -48,24 +60,24 @@ function destroy(req, res) {
     // converti id in numero
     const postId = parseInt(req.params.id);
     // trova il post corrispondente
-    const post = posts.find(p => p.id === postId); 
-    
+    const post = posts.find(p => p.id === postId);
+
     if (!post) {
         return res.status(404).json({ error: 'Post non trovato' });
     }
-    
-    
+
+
     // rimuovi il post dall'elenco di posts
     posts.splice(posts.indexOf(post), 1);
 
     //logga array modificato per debug
     console.log(posts);
-    
-    
+
+
     // restituisci lo stato di avvenuta cancellazione
-    res.status(204).json({ message: 'Post eliminato con successo' });
+    res.sendStatus(204)
 };
 
 
 // esportiamo il modulo del router
-module.exports = {index, show, store, update, modify, destroy}
+module.exports = { index, show, store, update, modify, destroy }
