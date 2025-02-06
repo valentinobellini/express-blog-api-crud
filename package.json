@@ -1,0 +1,31 @@
+{
+  "name": "express-blog-intro",
+  "version": "1.0.0",
+  "description": "BLOG Express server TEST",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valentinobellini/express-blog-intro.git"
+  },
+  "keywords": [
+    "blog",
+    "server",
+    "express",
+    "node",
+    "API"
+  ],
+  "author": "Valentino Bellini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valentinobellini/express-blog-intro/issues"
+  },
+  "homepage": "https://github.com/valentinobellini/express-blog-intro#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
