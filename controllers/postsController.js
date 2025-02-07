@@ -91,7 +91,28 @@ function update(req, res) {
 
 // modify
 function modify(req, res) {
-    res.send('Modifica parziale del post ' + req.params.id);
+        // converti id in numero
+    const postId = parseInt(req.params.id);
+    // trova il post corrispondente
+    const post = posts.find(p => p.id === postId);
+
+    if (!post) {
+        return res.status(404).json({ error: 'Post non trovato' });
+    }
+    
+    // aggiorna il post selezionato
+    post.title = req.body.title ? req.body.title : post.title ;
+    post.content = req.body.content ? req.body.content : post.content ;
+    post.image = req.body.image ? req.body.image : post.image ;
+    post.tags = req.body.tags ? req.body.tags : post.tags ;
+
+
+    // logga posts per debug
+    console.log(posts);
+    
+    // restituisci il post aggiornato
+    res.json(post);
+    
 };
 
 
