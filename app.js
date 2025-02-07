@@ -5,13 +5,17 @@ const port = 3000
 // importiamo il router per l'entita post
 const postsRouter = require('./routers/postsRouters');
 
+// definiamo l'uso del body-parser express per "application/JSON"
+app.use(express.json());
+
+
 
 
 // definiamo l'uso di una cartella per i file statici
 app.use(express.static('public'));
 
 
-// utilizziamo la rotta delle pizze andando a definire la parte iniziale delle rotte
+// utilizziamo la rotta deli posts andando a definire la parte iniziale delle rotte
 app.use("/posts", postsRouter)
 
 // definiamo la rotta home
