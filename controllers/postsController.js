@@ -66,7 +66,26 @@ function store(req, res) {
 
 // update
 function update(req, res) {
-    res.send('Modifica integrale del post ' + req.params.id);
+    // converti id in numero
+    const postId = parseInt(req.params.id);
+    // trova il post corrispondente
+    const post = posts.find(p => p.id === postId);
+
+    if (!post) {
+        return res.status(404).json({ error: 'Post non trovato' });
+    }
+    
+    // aggiorna il post selezionato
+    post.title = req.body.title;
+    post.content = req.body.content;
+    post.image = req.body.image;
+    post.tags = req.body.tags;
+
+    // logga posts per debug
+    console.log(posts);
+    
+    // restituisci il post aggiornato
+    res.json(post);
 };
 
 
