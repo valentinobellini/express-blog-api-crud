@@ -100,7 +100,7 @@ function modify(req, res) {
         return res.status(404).json({ error: 'Post non trovato' });
     }
     
-    // aggiorna il post selezionato
+    // aggiorna il post selezionato usando operatore ternario
     post.title = req.body.title ? req.body.title : post.title ;
     post.content = req.body.content ? req.body.content : post.content ;
     post.image = req.body.image ? req.body.image : post.image ;

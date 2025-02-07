@@ -15,11 +15,6 @@ app.use(express.static('public'));
 // utilizziamo la rotta dei posts andando a definire la parte iniziale delle rotte
 app.use("/posts", postsRouter)
 
-// definiamo la rotta home
-app.get('/', (req, res) => {
-    res.send('Server del mio blog')
-})
-
 
 
 app.listen(port, () => {
