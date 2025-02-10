@@ -9,7 +9,7 @@ const port = 3000
 const handleErrors = require('./middlewares/errorHandlers')
 
 //importa middleware notFound
-const handleErrors = require('./middlewares/notFound')
+const notFound = require('./middlewares/notFound')
 
 // importa il router per l'entita post
 const postsRouter = require('./routers/postsRouters');
@@ -22,6 +22,12 @@ app.use(express.static('public'));
 
 // utilizza la rotta dei posts andando a definire la parte iniziale delle rotte
 app.use("/posts", postsRouter)
+
+// utilizza middleware handleErrors
+app.use(handleErrors);
+
+// utilizza middlewares notFOund
+app.use(notFound);
 
 
 // avvia l server e mettilo in ascolto sulla porta selezionata
