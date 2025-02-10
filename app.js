@@ -5,20 +5,26 @@ const app = express()
 // definisci la porta da utilizzare
 const port = 3000
 
-// importiamo il router per l'entita post
+//importa middleware handleErrors
+const handleErrors = require('./middlewares/errorHandlers')
+
+//importa middleware notFound
+const handleErrors = require('./middlewares/notFound')
+
+// importa il router per l'entita post
 const postsRouter = require('./routers/postsRouters');
 
-// definiamo l'uso del body-parser express per "application/JSON"
+// definisci l'uso del body-parser express per "application/JSON"
 app.use(express.json());
 
-// definiamo l'uso di una cartella per i file statici
+// definisci l'uso di una cartella per i file statici
 app.use(express.static('public'));
 
-// utilizziamo la rotta dei posts andando a definire la parte iniziale delle rotte
+// utilizza la rotta dei posts andando a definire la parte iniziale delle rotte
 app.use("/posts", postsRouter)
 
 
-// avviai l server e mettilo in ascolto sulla porta selezionata
+// avvia l server e mettilo in ascolto sulla porta selezionata
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
