@@ -5,11 +5,13 @@ const app = express()
 // definisci la porta da utilizzare
 const port = 3000
 
-//importa middleware handleErrors
-const handleErrors = require('./middlewares/errorHandlers')
 
 //importa middleware notFound
 const notFound = require('./middlewares/notFound')
+
+//importa middleware handleErrors
+const handleErrors = require('./middlewares/errorHandlers')
+
 
 // importa il router per l'entita post
 const postsRouter = require('./routers/postsRouters');
