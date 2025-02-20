@@ -1,42 +1,44 @@
 const posts = [
     {
-        id:1,
-        title: "BIT ROT PROJECT 1",
-        content: "Old Seelampur, New Delhi, India.\nOld Seelampur is one of the poorest suburb areas but the biggest e-waste market in Delhi.\nThere are dozens of retail and wholesale stores. Most of them buy materials from abroad (USA, Europe, Dubai).\nThey buy it for about $10 cents to $15 cents per kilo and they sell it for double the price to other stores.\nThere, they separate the components of the electric and electronic devices in order to sell them again.",
-        image: "/img/img01.jpg",
-        tags: ["photography", "e-waste", "documentary", "environment", "pollution", "india"]
+        id: 1,
+        title: "Zuppa di Nebbia e Luci",
+        author: "Luca Ferri",
+        content: "Mescola la nebbia delle prime ore del mattino con un raggio di luce solare che fluttua nell'aria. Lascia che la sostanza diventi un sogno liquido, dove il caldo dell’inverno incontra la freschezza della primavera. Servi la zuppa in un piatto di silenzio, decorato con frammenti di stelle cadenti.",
+        category: "Zuppe surreali",
+        magic: true
     },
     {
-        id:2,
-        title: "BIT ROT PROJECT 2",
-        content: "One of the young boys working in Agbobloshie made the landfill his home; he has built a shelter made of different types of scraps and wastes. Most part of the people who work in Agbobloshie are from rural Northern Ghana. To work in Agbobloshie they have to leave their families and their homes.",
-        image: "/img/img02.jpg",
-        tags: ["photography", "e-waste", "documentary", "environment", "pollution", "ghana"]
-
-    },
-    {  
-        id:3,
-        title: "BIT ROT PROJECT 3",
-        content: "Agbobloshie, Accra, Ghana.\nA young man is transporting electric materials ready to be burnt. \nThe materials treated in the Agbobloshie landfill contain substances that are highly toxic for the environment and for human health. \nCadmium, lead, phthalates, antimony, PCBs (polychlorinated biphenyls), chlorobenzenes, Polybrominated diphenyl ethers (PBDEs), triphenyl phosphate (TPP), Brominated Flame Retardants (BFRs).",
-        image: "/img/img03.jpg",
-        tags: ["photography", "e-waste", "documentary", "environment", "pollution", "ghana"]
+        id: 2,
+        title: "Risotto di Stelle e Ombre",
+        author: "Marta Bianchi",
+        content: "Cuoci i granelli di stella nell'oscurità di una notte senza luna. L’ombra di un sogno infranto scivola sopra il riso, avvolgendo ogni chicco di una misteriosa malinconia. Una volta pronto, lascia che le ombre si mescolino alla luce della tua tavola, come se il cielo fosse stato raccolto in un piatto.",
+        category: "Risotti onirici",
+        magic: false
 
     },
     {
-        id:4,
-        title: "BIT ROT PROJECT 4",
-        content: "Old Seelampur, New Delhi, India.\nOld transformers and inductors are boiling in a metal pot.\nWhat is emblematic is that this particular type of pieces is essentially used, in life, in the so-called \"energy saving\" applications.\n\"In life,\" then these components are used to increase energy efficiency while also reducing CO2 pollution; when they \"die\" instead cause serious problems to people's health.\nMost of the time, this technique is carried out in a yard or in private houses, just like in this case.",
-        image: "/img/img04.jpg",
-        tags: ["photography", "e-waste", "documentary", "environment", "pollution", "india"]
-
+        id: 3,
+        title: "Insalata di Venti e Fiori di Luce",
+        author: "Giovanni Rossi",
+        content: "Fai danzare i venti tra le foglie di un albero che non esiste, raccogli i fiori di luce che crescono nel vuoto e mescolali in un piatto che non ha confini. Ogni boccone è una carezza del vento che si scompone in colori e ombre, come un ricordo che si dissolve nell'aria.",
+        category: "Contorni immaginari",
+        magic: true
     },
     {
-        id:5,
-        title: "BIT ROT PROJECT 5",
-        content: "Agbobloshie, Accra, Ghana.\nA guy is standing in the midst of smoke, fire and residual parts of electronic equipment as he burns it to extract some copper contained inside he will resell later to gain his daily food.",
-        image: "/img/img05.jpg",
-        tags: ["photography", "e-waste", "documentary", "environment", "pollution", "ghana"]
-
+        id: 4,
+        title: "Torta di Nuvole e Polvere di Sogno",
+        author: "Alessandra Verdi",
+        content: "Fondi insieme le nuvole più leggere, che si dissolvono alla prima carezza, con la polvere di sogni lontani. Lascia che la torta lieviti come una nuvola di passaggio, pronta a svanire non appena tocca il piatto. Una volta cotta, cospargila di sogni in polvere, per un effetto che evoca l’immensità di un universo senza tempo.",
+        category: "Dolci surreali",
+        magic: true
+    },
+    {
+        id: 5,
+        title: "Pasta al Raggio di Luna e Fumo di Primavera",
+        author: "Simone Icardi",
+        content: "Lascia che la pasta scivoli tra i raggi di luna che si spezzano come cristalli nel cielo. Ogni filo è avvolto nel fumo di una primavera che non è mai arrivata. Il piatto si trasforma mentre lo guardi, sfumando tra il caldo del giorno e il fresco della notte, in un eterno istante di perfezione.",
+        category: "Primi onirici",
+        magic: false
     }
 ];
 

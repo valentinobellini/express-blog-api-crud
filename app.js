@@ -11,7 +11,7 @@ const port = 3000
 const cors = require("cors")
 
 // usa cors per garantire accesso alla porta usata dal front end
-app.use(cors("http://localhost:5173/"))
+app.use(cors({ origin: ["http://localhost:5173"] }))
 
 
 
