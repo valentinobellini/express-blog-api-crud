@@ -6,6 +6,15 @@ const app = express()
 const port = 3000
 
 
+
+// importa cors
+const cors = require("cors")
+
+// usa cors per garantire accesso alla porta usata dal front end
+app.use(cors("http://localhost:5173/"))
+
+
+
 //importa middleware notFound
 const notFound = require('./middlewares/notFound')
 
